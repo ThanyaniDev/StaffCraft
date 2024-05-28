@@ -9,11 +9,8 @@ import SwiftUI
 
 struct LoginView: View {
     @StateObject private var viewModel = LoginViewModel()
-  
     @State private var isLoginSuccessful = false
     @EnvironmentObject var userData: UserData
-    
-   
     
     var body: some View {
         NavigationView {
@@ -63,7 +60,7 @@ struct LoginView: View {
                                     await viewModel.login()
                                     if viewModel.userLoginToken != nil {
                                         isLoginSuccessful = true
-                                        self.userData.userLoginToken = viewModel.userLoginToken
+                                        self.userData.userLoginToken = viewModel.userLoginToken ?? ""
                                     }
                                 }
                             }
@@ -80,7 +77,9 @@ struct LoginView: View {
                                 )
                         }
                         .padding()
-
+                        NavigationLink(destination: EmployeeScreen(), isActive: $isLoginSuccessful) {
+                            EmptyView()
+                        }
                     }
                 }
             }
