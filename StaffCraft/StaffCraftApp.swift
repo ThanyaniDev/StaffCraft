@@ -22,5 +22,6 @@ struct StaffCraftApp: App {
     func registerDependencies() {
         DependencyInjectorContainer.shared.register(EmployeeNetworkServiceImplementation() as EmployeeNetworkService, for: EmployeeNetworkService.self)
         DependencyInjectorContainer.shared.register(LoginRepositoryImplementation() as LoginRepository, for: LoginRepository.self)
+        DependencyInjectorContainer.shared.register(EmployeeListRepositoryImplementation() as EmployeeListRepository, for: EmployeeListRepository.self)
     }
 }

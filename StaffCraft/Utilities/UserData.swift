@@ -10,7 +10,7 @@ import Foundation
 class UserData: ObservableObject {
     @Published var selectedEmployee: String = ""
     @Published var selectedEmployeeEmail: String = ""
-    @Published var selectedDate = Date()
+    @Published var selectedDate: Date? = nil
     @Published var selectedImageUrl : String = ""
     @Published var userLoginToken: String = ""
     @Published var placeOfBirth: String = ""

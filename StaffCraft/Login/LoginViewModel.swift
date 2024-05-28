@@ -15,7 +15,7 @@ class LoginViewModel: ObservableObject {
     @Published var isLoading: Bool = false
     @Published var email = ""
     @Published var password = ""
-    @Published var userLoginToken = ""
+    @Published var userLoginToken: String? 
     
     @DependencyInjector
     private var loginRepository: LoginRepository

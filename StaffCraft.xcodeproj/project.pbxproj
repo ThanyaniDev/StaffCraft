@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1881CA8F2C068DA2008D0F8C /* EmployeeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1881CA8E2C068DA2008D0F8C /* EmployeeViewModelTests.swift */; };
+		1881CA912C0692E8008D0F8C /* EmployeeListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1881CA902C0692E8008D0F8C /* EmployeeListViewModelTests.swift */; };
+		1881CA932C0692FD008D0F8C /* MockEmployeeListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1881CA922C0692FD008D0F8C /* MockEmployeeListRepository.swift */; };
 		18CEAE3E2C059DEF00B6EF9C /* StaffCraftApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CEAE3D2C059DEF00B6EF9C /* StaffCraftApp.swift */; };
 		18CEAE402C059DEF00B6EF9C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CEAE3F2C059DEF00B6EF9C /* ContentView.swift */; };
 		18CEAE422C059DF200B6EF9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18CEAE412C059DF200B6EF9C /* Assets.xcassets */; };
@@ -24,6 +27,17 @@
 		18CEAE6F2C06318300B6EF9C /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CEAE6E2C06318300B6EF9C /* UserData.swift */; };
 		18CEAE7F2C0635D800B6EF9C /* MockLoginRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CEAE7E2C0635D800B6EF9C /* MockLoginRepository.swift */; };
 		18CEAE812C06362100B6EF9C /* LoginViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CEAE802C06362100B6EF9C /* LoginViewModelTests.swift */; };
+		18CEAE862C0651A400B6EF9C /*  EmployeeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CEAE852C0651A400B6EF9C /*  EmployeeView.swift */; };
+		18CEAE882C06535B00B6EF9C /* DateTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CEAE872C06535B00B6EF9C /* DateTextField.swift */; };
+		18CEAE8C2C065E5B00B6EF9C /* EmployeeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CEAE8B2C065E5B00B6EF9C /* EmployeeViewModel.swift */; };
+		18CEAE8F2C066E2E00B6EF9C /* AdditionalInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CEAE8E2C066E2E00B6EF9C /* AdditionalInfoView.swift */; };
+		18CEAE922C066F1E00B6EF9C /* EmployeeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CEAE912C066F1E00B6EF9C /* EmployeeListView.swift */; };
+		18CEAE942C066F3100B6EF9C /* EmployeeListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CEAE932C066F3100B6EF9C /* EmployeeListRepository.swift */; };
+		18CEAE962C066F4600B6EF9C /* EmployeeListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CEAE952C066F4600B6EF9C /* EmployeeListModel.swift */; };
+		18CEAE992C066F6100B6EF9C /* EmployeeListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CEAE982C066F6100B6EF9C /* EmployeeListViewModel.swift */; };
+		18CEAE9B2C0671D900B6EF9C /* HexColorCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CEAE9A2C0671D900B6EF9C /* HexColorCircle.swift */; };
+		18CEAE9D2C0671FE00B6EF9C /* EmployeeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CEAE9C2C0671FE00B6EF9C /* EmployeeCard.swift */; };
+		18CEAE9F2C06723100B6EF9C /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CEAE9E2C06723100B6EF9C /* Gender.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +51,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1881CA8E2C068DA2008D0F8C /* EmployeeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeViewModelTests.swift; sourceTree = "<group>"; };
+		1881CA902C0692E8008D0F8C /* EmployeeListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListViewModelTests.swift; sourceTree = "<group>"; };
+		1881CA922C0692FD008D0F8C /* MockEmployeeListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockEmployeeListRepository.swift; sourceTree = "<group>"; };
 		18CEAE3A2C059DEF00B6EF9C /* StaffCraft.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StaffCraft.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18CEAE3D2C059DEF00B6EF9C /* StaffCraftApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaffCraftApp.swift; sourceTree = "<group>"; };
 		18CEAE3F2C059DEF00B6EF9C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -56,6 +73,17 @@
 		18CEAE742C0635A100B6EF9C /* StaffCraftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StaffCraftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18CEAE7E2C0635D800B6EF9C /* MockLoginRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLoginRepository.swift; sourceTree = "<group>"; };
 		18CEAE802C06362100B6EF9C /* LoginViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelTests.swift; sourceTree = "<group>"; };
+		18CEAE852C0651A400B6EF9C /*  EmployeeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " EmployeeView.swift"; sourceTree = "<group>"; };
+		18CEAE872C06535B00B6EF9C /* DateTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTextField.swift; sourceTree = "<group>"; };
+		18CEAE8B2C065E5B00B6EF9C /* EmployeeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeViewModel.swift; sourceTree = "<group>"; };
+		18CEAE8E2C066E2E00B6EF9C /* AdditionalInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditionalInfoView.swift; sourceTree = "<group>"; };
+		18CEAE912C066F1E00B6EF9C /* EmployeeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListView.swift; sourceTree = "<group>"; };
+		18CEAE932C066F3100B6EF9C /* EmployeeListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListRepository.swift; sourceTree = "<group>"; };
+		18CEAE952C066F4600B6EF9C /* EmployeeListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListModel.swift; sourceTree = "<group>"; };
+		18CEAE982C066F6100B6EF9C /* EmployeeListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListViewModel.swift; sourceTree = "<group>"; };
+		18CEAE9A2C0671D900B6EF9C /* HexColorCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexColorCircle.swift; sourceTree = "<group>"; };
+		18CEAE9C2C0671FE00B6EF9C /* EmployeeCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeCard.swift; sourceTree = "<group>"; };
+		18CEAE9E2C06723100B6EF9C /* Gender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gender.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +125,9 @@
 		18CEAE3C2C059DEF00B6EF9C /* StaffCraft */ = {
 			isa = PBXGroup;
 			children = (
+				18CEAE902C066F0A00B6EF9C /* EmployeeList */,
+				18CEAE8D2C066E0D00B6EF9C /* AdditionalInfo */,
+				18CEAE842C06516C00B6EF9C /* Employee */,
 				18CEAE552C061DE000B6EF9C /* Utilities */,
 				18CEAE542C061DC200B6EF9C /* Login */,
 				18CEAE3D2C059DEF00B6EF9C /* StaffCraftApp.swift */,
@@ -150,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				18CEAE5A2C061ED100B6EF9C /* NetworkError.swift */,
+				18CEAE9E2C06723100B6EF9C /* Gender.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -168,6 +200,9 @@
 			children = (
 				18CEAE6A2C0630DB00B6EF9C /* CustomTextField.swift */,
 				18CEAE6C2C06312900B6EF9C /* InputValidation.swift */,
+				18CEAE872C06535B00B6EF9C /* DateTextField.swift */,
+				18CEAE9A2C0671D900B6EF9C /* HexColorCircle.swift */,
+				18CEAE9C2C0671FE00B6EF9C /* EmployeeCard.swift */,
 			);
 			path = UIComponent;
 			sourceTree = "<group>";
@@ -177,6 +212,8 @@
 			children = (
 				18CEAE7D2C0635BA00B6EF9C /* Mocks */,
 				18CEAE802C06362100B6EF9C /* LoginViewModelTests.swift */,
+				1881CA8E2C068DA2008D0F8C /* EmployeeViewModelTests.swift */,
+				1881CA902C0692E8008D0F8C /* EmployeeListViewModelTests.swift */,
 			);
 			path = StaffCraftTests;
 			sourceTree = "<group>";
@@ -185,8 +222,37 @@
 			isa = PBXGroup;
 			children = (
 				18CEAE7E2C0635D800B6EF9C /* MockLoginRepository.swift */,
+				1881CA922C0692FD008D0F8C /* MockEmployeeListRepository.swift */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		18CEAE842C06516C00B6EF9C /* Employee */ = {
+			isa = PBXGroup;
+			children = (
+				18CEAE852C0651A400B6EF9C /*  EmployeeView.swift */,
+				18CEAE8B2C065E5B00B6EF9C /* EmployeeViewModel.swift */,
+			);
+			path = Employee;
+			sourceTree = "<group>";
+		};
+		18CEAE8D2C066E0D00B6EF9C /* AdditionalInfo */ = {
+			isa = PBXGroup;
+			children = (
+				18CEAE8E2C066E2E00B6EF9C /* AdditionalInfoView.swift */,
+			);
+			path = AdditionalInfo;
+			sourceTree = "<group>";
+		};
+		18CEAE902C066F0A00B6EF9C /* EmployeeList */ = {
+			isa = PBXGroup;
+			children = (
+				18CEAE912C066F1E00B6EF9C /* EmployeeListView.swift */,
+				18CEAE932C066F3100B6EF9C /* EmployeeListRepository.swift */,
+				18CEAE952C066F4600B6EF9C /* EmployeeListModel.swift */,
+				18CEAE982C066F6100B6EF9C /* EmployeeListViewModel.swift */,
+			);
+			path = EmployeeList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,18 +356,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				18CEAE6F2C06318300B6EF9C /* UserData.swift in Sources */,
+				18CEAE8F2C066E2E00B6EF9C /* AdditionalInfoView.swift in Sources */,
+				18CEAE922C066F1E00B6EF9C /* EmployeeListView.swift in Sources */,
 				18CEAE402C059DEF00B6EF9C /* ContentView.swift in Sources */,
 				18CEAE6B2C0630DB00B6EF9C /* CustomTextField.swift in Sources */,
 				18CEAE642C062FC300B6EF9C /* LoginModels.swift in Sources */,
 				18CEAE5B2C061ED100B6EF9C /* NetworkError.swift in Sources */,
+				18CEAE9D2C0671FE00B6EF9C /* EmployeeCard.swift in Sources */,
+				18CEAE9B2C0671D900B6EF9C /* HexColorCircle.swift in Sources */,
 				18CEAE662C06301400B6EF9C /* LoginView.swift in Sources */,
 				18CEAE5E2C061F3F00B6EF9C /* DependencyInjectorContainer.swift in Sources */,
 				18CEAE622C0620C000B6EF9C /* LoginRepository.swift in Sources */,
+				18CEAE9F2C06723100B6EF9C /* Gender.swift in Sources */,
 				18CEAE6D2C06312900B6EF9C /* InputValidation.swift in Sources */,
+				18CEAE962C066F4600B6EF9C /* EmployeeListModel.swift in Sources */,
 				18CEAE582C061E2B00B6EF9C /* EmployeeNetworkService.swift in Sources */,
 				18CEAE602C061F8300B6EF9C /* DependencyInjector.swift in Sources */,
 				18CEAE682C06302800B6EF9C /* LoginViewModel.swift in Sources */,
 				18CEAE3E2C059DEF00B6EF9C /* StaffCraftApp.swift in Sources */,
+				18CEAE942C066F3100B6EF9C /* EmployeeListRepository.swift in Sources */,
+				18CEAE882C06535B00B6EF9C /* DateTextField.swift in Sources */,
+				18CEAE8C2C065E5B00B6EF9C /* EmployeeViewModel.swift in Sources */,
+				18CEAE992C066F6100B6EF9C /* EmployeeListViewModel.swift in Sources */,
+				18CEAE862C0651A400B6EF9C /*  EmployeeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,8 +386,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1881CA932C0692FD008D0F8C /* MockEmployeeListRepository.swift in Sources */,
+				1881CA912C0692E8008D0F8C /* EmployeeListViewModelTests.swift in Sources */,
 				18CEAE812C06362100B6EF9C /* LoginViewModelTests.swift in Sources */,
 				18CEAE7F2C0635D800B6EF9C /* MockLoginRepository.swift in Sources */,
+				1881CA8F2C068DA2008D0F8C /* EmployeeViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
