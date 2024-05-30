@@ -9,9 +9,10 @@ import SwiftUI
 
 struct EmployeeReview: View {
     @EnvironmentObject var userData: UserData
+    @StateObject private var viewModel = EmployeeReviewViewModel()
+    @State private var showStatusView = false
     
     var body: some View {
-        
         VStack(alignment: .leading) {
             
             Text("Personal Details")
@@ -85,10 +86,12 @@ struct EmployeeReview: View {
             
             Button(action: {
                 
-                
                 Task {
+                    await viewModel.submitEmployeeDetails(userData: userData)
+                    if viewModel.isCreadted != nil{
+                        showStatusView = true
+                    }
                 }
-                
             }) {
                 Text("Submit")
                     .foregroundColor(.black)
@@ -102,12 +105,17 @@ struct EmployeeReview: View {
                     )
             }
             .padding()
+            NavigationLink(destination: StatusView(status: .success,
+                                                   headline:"Suceessful",
+                                                   subheadline: viewModel.successSubHeader ?? ""),
+                           isActive: $showStatusView) {
+                EmptyView()
+            }
             
         }.padding()
             .navigationTitle("Review")
     }
 }
-
 
 #Preview {
     EmployeeReview()

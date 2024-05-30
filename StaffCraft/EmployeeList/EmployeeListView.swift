@@ -13,7 +13,6 @@ struct EmployeeListView: View {
     
     @StateObject private var viewModel = EmployeeListViewModel()
     
-   
     var body: some View {
         NavigationView {
             VStack {
@@ -43,7 +42,7 @@ struct EmployeeListView: View {
                                     userData.selectedEmployee = "\(employee.first_name) \(employee.last_name)"
                                     userData.selectedEmployeeEmail = employee.email
                                     userData.selectedImageUrl = employee.avatar
-                                    
+                                    userData.id = employee.id
                                     presentationMode.wrappedValue.dismiss()
                                 }) {
                                     HStack() {

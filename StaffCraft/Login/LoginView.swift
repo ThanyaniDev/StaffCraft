@@ -11,9 +11,9 @@ struct LoginView: View {
     
     @StateObject private var viewModel = LoginViewModel()
     @State private var isLoginSuccessful = false
-    
+    @State private var isLoginFailed = false
     @EnvironmentObject var userData: UserData
-   
+    
     var body: some View {
         NavigationView {
             VStack(alignment: .center) {
@@ -22,7 +22,9 @@ struct LoginView: View {
                         .padding()
                 }  else {
                     if  let error = viewModel.loginError {
-                        StatusView(status: .failure, headline: "An error occurred.", subheadline: error.message)
+                        Text(error.message)
+                            .foregroundColor(.red)
+                            .padding()
                     } else {
                         Image(systemName:"person.fill")
                             .resizable()
@@ -58,10 +60,17 @@ struct LoginView: View {
                             if viewModel.validateInputs() {
                                 Task {
                                     await viewModel.login()
+                                    
                                     if viewModel.userLoginToken != nil {
                                         isLoginSuccessful = true
                                         self.userData.userLoginToken = viewModel.userLoginToken ?? ""
+                                    } else {
+                                        isLoginFailed = true
+                                        NavigationLink(destination: EmployeeView(), isActive: $isLoginFailed) {
+                                            EmptyView()
+                                        }
                                     }
+                                    
                                 }
                             }
                         }) {

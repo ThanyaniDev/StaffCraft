@@ -17,7 +17,7 @@ struct StatusView: View{
     
     var body: some View {
         VStack(spacing: 20) {
-            Image(systemName: status == .success ? "checkmark.circle.fill" : "xmark.circle.fill")
+            Image(systemName: status == .success ? "checkmark.circle.outlined" : "xmark.circle.fill")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 100, height: 100)
@@ -36,17 +36,28 @@ struct StatusView: View{
             
             if status == .success {
                 Button(action: {
-                    // Handle success action or dismiss sheet
+                    isShowingStatusView = true
+                    NavigationLink(destination: EmployeeView(),
+                                   isActive: $isShowingStatusView) {
+                        EmptyView()
+                    }
                 }) {
-                    Text("Done")
-                        .font(.subheadline)
+                    Text("DONE")
+                        .foregroundColor(.black)
                         .padding()
-                        .background(Color.blue)
-                        .foregroundColor(.white)
-                        .cornerRadius(10)
+                        .frame(maxWidth: .infinity)
+                        .background(Color.white)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 5)
+                                .stroke(Color.black, lineWidth: 1)
+                                .frame(height: 40)
+                        )
                 }
+                .padding()
             }
         }
         .padding()
+        .navigationBarBackButtonHidden(true)
+        
     }
 }

@@ -8,6 +8,7 @@
 import Foundation
 
 class UserData: ObservableObject {
+    @Published var id: Int = 0
     @Published var selectedEmployee: String = ""
     @Published var selectedEmployeeEmail: String = ""
     @Published var selectedDate: Date? = nil
