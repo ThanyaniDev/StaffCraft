@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct EmployeeScreen: View {
+struct EmployeeView: View {
     @State private var isShowingEmployeeList = false
     @StateObject private var viewModel = EmployeeViewModel()
     @EnvironmentObject var userData: UserData
@@ -24,7 +24,7 @@ struct EmployeeScreen: View {
                 RoundedRectangle(cornerRadius: 5)
                     .stroke(Color.black, lineWidth: 1)
                     .frame(height: 60)
-                    .padding(.horizontal, 16)
+                    .padding(.horizontal, 8)
                 
                 HStack {
                     AsyncImage(url: URL(string: userData.selectedImageUrl)) { phase in
@@ -63,7 +63,7 @@ struct EmployeeScreen: View {
                         EmployeeListView().environmentObject(userData)
                     }
                 }
-                .padding(.horizontal, 16)
+                .padding(.horizontal, 8)
             }
             
             DateTextField(date: $userData.selectedDate)
@@ -78,7 +78,7 @@ struct EmployeeScreen: View {
             )
             
             Spacer()
-        }
+        }.padding()
         .navigationTitle("Employee")
         .navigationBarItems(trailing:
                                 NavigationLink(destination: AdditionalInfoView().environmentObject(userData), isActive: $viewModel.isNavigatingToNext) {
@@ -88,12 +88,12 @@ struct EmployeeScreen: View {
             }
         )
         .alert(isPresented: $viewModel.showAlert) {
-            Alert(title: Text("Validation Error"), message: Text(viewModel.alertMessage), dismissButton: .default(Text("OK")))
+            Alert(title: Text("Error"), message: Text(viewModel.alertMessage), dismissButton: .default(Text("OK")))
         }
         .navigationBarBackButtonHidden(true)
     }
 }
 
 #Preview {
-    EmployeeScreen()
+    EmployeeView()
 }

@@ -7,6 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1850D2832C0795730004B19A /* AdditionalInfoListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1850D2822C0795730004B19A /* AdditionalInfoListRepository.swift */; };
+		1850D2852C07958E0004B19A /* AdditionalInfoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1850D2842C07958E0004B19A /* AdditionalInfoListViewModel.swift */; };
+		1850D2872C0795AF0004B19A /* AdditionalInfoListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1850D2862C0795AF0004B19A /* AdditionalInfoListModel.swift */; };
+		1850D2892C0795CD0004B19A /* AdditionalInfoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1850D2882C0795CD0004B19A /* AdditionalInfoListView.swift */; };
+		1850D28C2C0797F40004B19A /* EmployeeReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1850D28B2C0797F40004B19A /* EmployeeReview.swift */; };
+		1850D28E2C07995B0004B19A /* AdditionalInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1850D28D2C07995B0004B19A /* AdditionalInfoViewModel.swift */; };
+		1850D2912C07ADFA0004B19A /* EmployeeReviewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1850D2902C07ADFA0004B19A /* EmployeeReviewModel.swift */; };
+		1850D2932C07AE0D0004B19A /* EmployeeReviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1850D2922C07AE0D0004B19A /* EmployeeReviewViewModel.swift */; };
+		1850D2952C07AE200004B19A /* EmployeeReviewRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1850D2942C07AE200004B19A /* EmployeeReviewRepository.swift */; };
+		1850D2992C07EC080004B19A /* AdditionalInfoViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1850D2982C07EC080004B19A /* AdditionalInfoViewModelTests.swift */; };
+		1850D29D2C07F19E0004B19A /* AdditionalInfoListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1850D29C2C07F19E0004B19A /* AdditionalInfoListViewModelTests.swift */; };
+		1850D2A02C07F4DB0004B19A /* DateFormatterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1850D29F2C07F4DB0004B19A /* DateFormatterExtension.swift */; };
+		1850D2A22C07FEAD0004B19A /* StatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1850D2A12C07FEAD0004B19A /* StatusView.swift */; };
+		1850D2A42C07FF030004B19A /* StatusType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1850D2A32C07FF030004B19A /* StatusType.swift */; };
+		1850D2A62C081BC40004B19A /* MockAdditionalInfoListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1850D2A52C081BC40004B19A /* MockAdditionalInfoListRepository.swift */; };
 		1881CA8F2C068DA2008D0F8C /* EmployeeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1881CA8E2C068DA2008D0F8C /* EmployeeViewModelTests.swift */; };
 		1881CA912C0692E8008D0F8C /* EmployeeListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1881CA902C0692E8008D0F8C /* EmployeeListViewModelTests.swift */; };
 		1881CA932C0692FD008D0F8C /* MockEmployeeListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1881CA922C0692FD008D0F8C /* MockEmployeeListRepository.swift */; };
@@ -51,6 +66,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1850D2822C0795730004B19A /* AdditionalInfoListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditionalInfoListRepository.swift; sourceTree = "<group>"; };
+		1850D2842C07958E0004B19A /* AdditionalInfoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditionalInfoListViewModel.swift; sourceTree = "<group>"; };
+		1850D2862C0795AF0004B19A /* AdditionalInfoListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditionalInfoListModel.swift; sourceTree = "<group>"; };
+		1850D2882C0795CD0004B19A /* AdditionalInfoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditionalInfoListView.swift; sourceTree = "<group>"; };
+		1850D28B2C0797F40004B19A /* EmployeeReview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeReview.swift; sourceTree = "<group>"; };
+		1850D28D2C07995B0004B19A /* AdditionalInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditionalInfoViewModel.swift; sourceTree = "<group>"; };
+		1850D2902C07ADFA0004B19A /* EmployeeReviewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeReviewModel.swift; sourceTree = "<group>"; };
+		1850D2922C07AE0D0004B19A /* EmployeeReviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeReviewViewModel.swift; sourceTree = "<group>"; };
+		1850D2942C07AE200004B19A /* EmployeeReviewRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeReviewRepository.swift; sourceTree = "<group>"; };
+		1850D2982C07EC080004B19A /* AdditionalInfoViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditionalInfoViewModelTests.swift; sourceTree = "<group>"; };
+		1850D29C2C07F19E0004B19A /* AdditionalInfoListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditionalInfoListViewModelTests.swift; sourceTree = "<group>"; };
+		1850D29F2C07F4DB0004B19A /* DateFormatterExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterExtension.swift; sourceTree = "<group>"; };
+		1850D2A12C07FEAD0004B19A /* StatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusView.swift; sourceTree = "<group>"; };
+		1850D2A32C07FF030004B19A /* StatusType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusType.swift; sourceTree = "<group>"; };
+		1850D2A52C081BC40004B19A /* MockAdditionalInfoListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAdditionalInfoListRepository.swift; sourceTree = "<group>"; };
 		1881CA8E2C068DA2008D0F8C /* EmployeeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeViewModelTests.swift; sourceTree = "<group>"; };
 		1881CA902C0692E8008D0F8C /* EmployeeListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListViewModelTests.swift; sourceTree = "<group>"; };
 		1881CA922C0692FD008D0F8C /* MockEmployeeListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockEmployeeListRepository.swift; sourceTree = "<group>"; };
@@ -104,6 +134,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1850D2812C07948C0004B19A /* AdditionalInfoList */ = {
+			isa = PBXGroup;
+			children = (
+				1850D2822C0795730004B19A /* AdditionalInfoListRepository.swift */,
+				1850D2842C07958E0004B19A /* AdditionalInfoListViewModel.swift */,
+				1850D2862C0795AF0004B19A /* AdditionalInfoListModel.swift */,
+				1850D2882C0795CD0004B19A /* AdditionalInfoListView.swift */,
+			);
+			path = AdditionalInfoList;
+			sourceTree = "<group>";
+		};
+		1850D28A2C0797D60004B19A /* EmployeeReview */ = {
+			isa = PBXGroup;
+			children = (
+				1850D28B2C0797F40004B19A /* EmployeeReview.swift */,
+				1850D2902C07ADFA0004B19A /* EmployeeReviewModel.swift */,
+				1850D2922C07AE0D0004B19A /* EmployeeReviewViewModel.swift */,
+				1850D2942C07AE200004B19A /* EmployeeReviewRepository.swift */,
+			);
+			path = EmployeeReview;
+			sourceTree = "<group>";
+		};
+		1850D29E2C07F4B30004B19A /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				1850D29F2C07F4DB0004B19A /* DateFormatterExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		18CEAE312C059DEF00B6EF9C = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +185,8 @@
 		18CEAE3C2C059DEF00B6EF9C /* StaffCraft */ = {
 			isa = PBXGroup;
 			children = (
+				1850D28A2C0797D60004B19A /* EmployeeReview */,
+				1850D2812C07948C0004B19A /* AdditionalInfoList */,
 				18CEAE902C066F0A00B6EF9C /* EmployeeList */,
 				18CEAE8D2C066E0D00B6EF9C /* AdditionalInfo */,
 				18CEAE842C06516C00B6EF9C /* Employee */,
@@ -160,6 +222,7 @@
 		18CEAE552C061DE000B6EF9C /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				1850D29E2C07F4B30004B19A /* Extension */,
 				18CEAE692C0630AE00B6EF9C /* UIComponent */,
 				18CEAE5C2C061EFC00B6EF9C /* DI */,
 				18CEAE592C061E8B00B6EF9C /* Enums */,
@@ -182,6 +245,7 @@
 			children = (
 				18CEAE5A2C061ED100B6EF9C /* NetworkError.swift */,
 				18CEAE9E2C06723100B6EF9C /* Gender.swift */,
+				1850D2A32C07FF030004B19A /* StatusType.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -203,6 +267,7 @@
 				18CEAE872C06535B00B6EF9C /* DateTextField.swift */,
 				18CEAE9A2C0671D900B6EF9C /* HexColorCircle.swift */,
 				18CEAE9C2C0671FE00B6EF9C /* EmployeeCard.swift */,
+				1850D2A12C07FEAD0004B19A /* StatusView.swift */,
 			);
 			path = UIComponent;
 			sourceTree = "<group>";
@@ -214,6 +279,8 @@
 				18CEAE802C06362100B6EF9C /* LoginViewModelTests.swift */,
 				1881CA8E2C068DA2008D0F8C /* EmployeeViewModelTests.swift */,
 				1881CA902C0692E8008D0F8C /* EmployeeListViewModelTests.swift */,
+				1850D2982C07EC080004B19A /* AdditionalInfoViewModelTests.swift */,
+				1850D29C2C07F19E0004B19A /* AdditionalInfoListViewModelTests.swift */,
 			);
 			path = StaffCraftTests;
 			sourceTree = "<group>";
@@ -223,6 +290,7 @@
 			children = (
 				18CEAE7E2C0635D800B6EF9C /* MockLoginRepository.swift */,
 				1881CA922C0692FD008D0F8C /* MockEmployeeListRepository.swift */,
+				1850D2A52C081BC40004B19A /* MockAdditionalInfoListRepository.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -240,6 +308,7 @@
 			isa = PBXGroup;
 			children = (
 				18CEAE8E2C066E2E00B6EF9C /* AdditionalInfoView.swift */,
+				1850D28D2C07995B0004B19A /* AdditionalInfoViewModel.swift */,
 			);
 			path = AdditionalInfo;
 			sourceTree = "<group>";
@@ -247,8 +316,8 @@
 		18CEAE902C066F0A00B6EF9C /* EmployeeList */ = {
 			isa = PBXGroup;
 			children = (
-				18CEAE912C066F1E00B6EF9C /* EmployeeListView.swift */,
 				18CEAE932C066F3100B6EF9C /* EmployeeListRepository.swift */,
+				18CEAE912C066F1E00B6EF9C /* EmployeeListView.swift */,
 				18CEAE952C066F4600B6EF9C /* EmployeeListModel.swift */,
 				18CEAE982C066F6100B6EF9C /* EmployeeListViewModel.swift */,
 			);
@@ -356,8 +425,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				18CEAE6F2C06318300B6EF9C /* UserData.swift in Sources */,
+				1850D28E2C07995B0004B19A /* AdditionalInfoViewModel.swift in Sources */,
 				18CEAE8F2C066E2E00B6EF9C /* AdditionalInfoView.swift in Sources */,
 				18CEAE922C066F1E00B6EF9C /* EmployeeListView.swift in Sources */,
+				1850D2A22C07FEAD0004B19A /* StatusView.swift in Sources */,
 				18CEAE402C059DEF00B6EF9C /* ContentView.swift in Sources */,
 				18CEAE6B2C0630DB00B6EF9C /* CustomTextField.swift in Sources */,
 				18CEAE642C062FC300B6EF9C /* LoginModels.swift in Sources */,
@@ -374,11 +445,21 @@
 				18CEAE602C061F8300B6EF9C /* DependencyInjector.swift in Sources */,
 				18CEAE682C06302800B6EF9C /* LoginViewModel.swift in Sources */,
 				18CEAE3E2C059DEF00B6EF9C /* StaffCraftApp.swift in Sources */,
+				1850D2892C0795CD0004B19A /* AdditionalInfoListView.swift in Sources */,
+				1850D2872C0795AF0004B19A /* AdditionalInfoListModel.swift in Sources */,
+				1850D2932C07AE0D0004B19A /* EmployeeReviewViewModel.swift in Sources */,
+				1850D2912C07ADFA0004B19A /* EmployeeReviewModel.swift in Sources */,
+				1850D2A02C07F4DB0004B19A /* DateFormatterExtension.swift in Sources */,
 				18CEAE942C066F3100B6EF9C /* EmployeeListRepository.swift in Sources */,
 				18CEAE882C06535B00B6EF9C /* DateTextField.swift in Sources */,
 				18CEAE8C2C065E5B00B6EF9C /* EmployeeViewModel.swift in Sources */,
+				1850D2952C07AE200004B19A /* EmployeeReviewRepository.swift in Sources */,
+				1850D28C2C0797F40004B19A /* EmployeeReview.swift in Sources */,
 				18CEAE992C066F6100B6EF9C /* EmployeeListViewModel.swift in Sources */,
+				1850D2852C07958E0004B19A /* AdditionalInfoListViewModel.swift in Sources */,
+				1850D2A42C07FF030004B19A /* StatusType.swift in Sources */,
 				18CEAE862C0651A400B6EF9C /*  EmployeeView.swift in Sources */,
+				1850D2832C0795730004B19A /* AdditionalInfoListRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,7 +470,10 @@
 				1881CA932C0692FD008D0F8C /* MockEmployeeListRepository.swift in Sources */,
 				1881CA912C0692E8008D0F8C /* EmployeeListViewModelTests.swift in Sources */,
 				18CEAE812C06362100B6EF9C /* LoginViewModelTests.swift in Sources */,
+				1850D2992C07EC080004B19A /* AdditionalInfoViewModelTests.swift in Sources */,
+				1850D2A62C081BC40004B19A /* MockAdditionalInfoListRepository.swift in Sources */,
 				18CEAE7F2C0635D800B6EF9C /* MockLoginRepository.swift in Sources */,
+				1850D29D2C07F19E0004B19A /* AdditionalInfoListViewModelTests.swift in Sources */,
 				1881CA8F2C068DA2008D0F8C /* EmployeeViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -539,6 +623,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -567,6 +652,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

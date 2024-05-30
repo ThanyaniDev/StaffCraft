@@ -8,10 +8,12 @@
 import SwiftUI
 
 struct LoginView: View {
+    
     @StateObject private var viewModel = LoginViewModel()
     @State private var isLoginSuccessful = false
-    @EnvironmentObject var userData: UserData
     
+    @EnvironmentObject var userData: UserData
+   
     var body: some View {
         NavigationView {
             VStack(alignment: .center) {
@@ -20,9 +22,7 @@ struct LoginView: View {
                         .padding()
                 }  else {
                     if  let error = viewModel.loginError {
-                        Text(error.message)
-                            .foregroundColor(.red)
-                            .padding()
+                        StatusView(status: .failure, headline: "An error occurred.", subheadline: error.message)
                     } else {
                         Image(systemName:"person.fill")
                             .resizable()
@@ -77,7 +77,7 @@ struct LoginView: View {
                                 )
                         }
                         .padding()
-                        NavigationLink(destination: EmployeeScreen(), isActive: $isLoginSuccessful) {
+                        NavigationLink(destination: EmployeeView(), isActive: $isLoginSuccessful) {
                             EmptyView()
                         }
                     }
