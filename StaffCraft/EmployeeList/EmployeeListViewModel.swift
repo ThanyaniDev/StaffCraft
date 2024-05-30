@@ -12,6 +12,7 @@ class EmployeeListViewModel: ObservableObject {
     @Published var employees: [EmployeeList] = []
     @Published var isLoading: Bool = false
     @Published var errorMessage: String? = nil
+    @Published var searchText: String = ""
     
     @DependencyInjector
     private var employeeListRepository: EmployeeListRepository
@@ -28,6 +29,17 @@ class EmployeeListViewModel: ObservableObject {
             self.employees = employeesList
         } catch {
             self.errorMessage = "Failed to load employees: \(error.localizedDescription)"
+        }
+    }
+    
+  var filteredEmployees: [EmployeeList] {
+        if searchText.isEmpty {
+            return employees
+        } else {
+            return employees.filter { employee in
+                employee.first_name .lowercased().contains(searchText.lowercased()) ||
+                employee.email.lowercased().contains(searchText.lowercased())
+            }
         }
     }
 }

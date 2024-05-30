@@ -58,6 +58,6 @@ struct DateTextField: View {
                 }
             }
         }
-        .padding()
+        .padding(.horizontal,8)
     }
 }

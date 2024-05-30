@@ -8,24 +8,12 @@
 import SwiftUI
 
 struct EmployeeListView: View {
-   
-    @State private var searchText: String = ""
     @Environment(\.presentationMode) var presentationMode
     @EnvironmentObject var userData: UserData
     
     @StateObject private var viewModel = EmployeeListViewModel()
     
-    private var filteredEmployees: [EmployeeList] {
-        if searchText.isEmpty {
-            return viewModel.employees
-        } else {
-            return viewModel.employees.filter { employee in
-                employee.first_name .lowercased().contains(searchText.lowercased()) ||
-                employee.email.lowercased().contains(searchText.lowercased())
-            }
-        }
-    }
-    
+   
     var body: some View {
         NavigationView {
             VStack {
@@ -35,9 +23,7 @@ struct EmployeeListView: View {
                         .padding()
                 } else {
                     if let errorMessage = viewModel.errorMessage {
-                        Text(errorMessage)
-                            .foregroundColor(.red)
-                            .padding()
+                        StatusView(status: .failure, headline: "Error", subheadline: errorMessage)
                     } else {
                         HStack(alignment: .firstTextBaseline){
                             Spacer()
@@ -48,11 +34,11 @@ struct EmployeeListView: View {
                         }
                         
                         VStack {
-                            TextField("Find an employee", text: $searchText)
+                            TextField("Find an employee", text: $viewModel.searchText)
                                 .textFieldStyle(RoundedBorderTextFieldStyle())
                                 .padding()
                             
-                            List(filteredEmployees) { employee in
+                            List(viewModel.filteredEmployees) { employee in
                                 Button(action: {
                                     userData.selectedEmployee = "\(employee.first_name) \(employee.last_name)"
                                     userData.selectedEmployeeEmail = employee.email

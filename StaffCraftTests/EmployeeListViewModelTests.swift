@@ -8,7 +8,6 @@
 import XCTest
 @testable import StaffCraft
 
-
 class EmployeeListViewModelTests: XCTestCase {
     
     var viewModel: EmployeeListViewModel!
