@@ -23,7 +23,7 @@ class LoginViewModel: ObservableObject {
     func login() async {
         let loginRequest = LoginRequest(email: email, password: password)
     
-        isLoading = true
+        self.isLoading = true
         defer {
             isLoading = false
         }

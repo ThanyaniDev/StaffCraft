@@ -11,9 +11,10 @@ struct LoginView: View {
     
     @StateObject private var viewModel = LoginViewModel()
     @State private var isLoginSuccessful = false
-    
+    @State private var isLoginFailed = false
     @EnvironmentObject var userData: UserData
-   
+    @Environment(\.presentationMode) var presentationMode
+    
     var body: some View {
         NavigationView {
             VStack(alignment: .center) {
@@ -22,7 +23,9 @@ struct LoginView: View {
                         .padding()
                 }  else {
                     if  let error = viewModel.loginError {
-                        StatusView(status: .failure, headline: "An error occurred.", subheadline: error.message)
+                        NavigationLink(destination: StatusView(status: .failure, headline:"LOGIN ERROR", subheadline: error.message), isActive: $isLoginFailed) {
+                            EmptyView()
+                        }
                     } else {
                         Image(systemName:"person.fill")
                             .resizable()
@@ -58,10 +61,17 @@ struct LoginView: View {
                             if viewModel.validateInputs() {
                                 Task {
                                     await viewModel.login()
+                                    
                                     if viewModel.userLoginToken != nil {
                                         isLoginSuccessful = true
                                         self.userData.userLoginToken = viewModel.userLoginToken ?? ""
+                                    } else {
+                                        isLoginFailed = true
+//                                        NavigationLink(destination: EmployeeView(), isActive: $isLoginFailed) {
+//                                            EmptyView()
+//                                        }
                                     }
+                                    
                                 }
                             }
                         }) {

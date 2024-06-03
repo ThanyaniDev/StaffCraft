@@ -12,6 +12,7 @@ protocol AdditionalInfoListRepository {
 }
 
 class AdditionalInfoListRepositoryImplementation: AdditionalInfoListRepository {
+    
     @DependencyInjector
     private var employeeNetworkService: EmployeeNetworkService
     
