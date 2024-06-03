@@ -13,6 +13,7 @@ struct LoginView: View {
     @State private var isLoginSuccessful = false
     @State private var isLoginFailed = false
     @EnvironmentObject var userData: UserData
+    @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
         NavigationView {
@@ -22,9 +23,9 @@ struct LoginView: View {
                         .padding()
                 }  else {
                     if  let error = viewModel.loginError {
-                        Text(error.message)
-                            .foregroundColor(.red)
-                            .padding()
+                        NavigationLink(destination: StatusView(status: .failure, headline:"LOGIN ERROR", subheadline: error.message), isActive: $isLoginFailed) {
+                            EmptyView()
+                        }
                     } else {
                         Image(systemName:"person.fill")
                             .resizable()
@@ -66,9 +67,9 @@ struct LoginView: View {
                                         self.userData.userLoginToken = viewModel.userLoginToken ?? ""
                                     } else {
                                         isLoginFailed = true
-                                        NavigationLink(destination: EmployeeView(), isActive: $isLoginFailed) {
-                                            EmptyView()
-                                        }
+//                                        NavigationLink(destination: EmployeeView(), isActive: $isLoginFailed) {
+//                                            EmptyView()
+//                                        }
                                     }
                                     
                                 }

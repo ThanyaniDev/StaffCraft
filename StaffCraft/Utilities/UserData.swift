@@ -19,4 +19,18 @@ class UserData: ObservableObject {
     @Published var selectedPreferredHexColor: String = ""
     @Published var residentialAddress: String = ""
     @Published var gender: String = ""
+    
+    func reset() {
+        id = 0
+        selectedEmployee = ""
+        selectedEmployeeEmail = ""
+        selectedDate = nil
+        selectedImageUrl = ""
+        userLoginToken = ""
+        placeOfBirth = ""
+        selectedPreferredColor = ""
+        selectedPreferredHexColor = ""
+        residentialAddress = ""
+        gender = ""
+    }
 }
