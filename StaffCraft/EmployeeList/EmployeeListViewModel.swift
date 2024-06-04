@@ -19,7 +19,7 @@ class EmployeeListViewModel: ObservableObject {
     
     @MainActor
     func fetchEmployees() async {
-        isLoading = true
+        self.isLoading = true
         defer {
             self.isLoading = false
         }
@@ -37,7 +37,7 @@ class EmployeeListViewModel: ObservableObject {
             return employees
         } else {
             return employees.filter { employee in
-                employee.first_name .lowercased().contains(searchText.lowercased()) ||
+                employee.first_name.lowercased().contains(searchText.lowercased()) ||
                 employee.email.lowercased().contains(searchText.lowercased())
             }
         }

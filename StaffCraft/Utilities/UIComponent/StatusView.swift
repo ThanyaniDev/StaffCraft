@@ -9,10 +9,9 @@ import SwiftUI
 
 struct StatusView: View {
     
-    var status: StatusType
-    var headline: String
-    var subheadline: String
-    
+    @State var status: StatusType
+    @State var headline: String
+    @State var subheadline: String
     @State private var isShowingEmployeeView = false
     @EnvironmentObject var userData: UserData
     @Environment(\.presentationMode) var presentationMode
@@ -91,5 +90,3 @@ struct StatusView: View {
         }
     }
 }
-
-

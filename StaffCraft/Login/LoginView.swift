@@ -13,7 +13,6 @@ struct LoginView: View {
     @State private var isLoginSuccessful = false
     @State private var isLoginFailed = false
     @EnvironmentObject var userData: UserData
-    @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
         NavigationView {
@@ -65,13 +64,7 @@ struct LoginView: View {
                                     if viewModel.userLoginToken != nil {
                                         isLoginSuccessful = true
                                         self.userData.userLoginToken = viewModel.userLoginToken ?? ""
-                                    } else {
-                                        isLoginFailed = true
-//                                        NavigationLink(destination: EmployeeView(), isActive: $isLoginFailed) {
-//                                            EmptyView()
-//                                        }
                                     }
-                                    
                                 }
                             }
                         }) {

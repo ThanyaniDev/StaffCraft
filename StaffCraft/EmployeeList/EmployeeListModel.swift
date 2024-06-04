@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct EmployeeListResponse: Decodable {
+struct EmployeeListResponse: Codable {
     let data: [EmployeeList]
 }
 
-struct EmployeeList: Identifiable, Equatable, Decodable  {
+struct EmployeeList: Identifiable, Equatable, Codable  {
     let id: Int
     let email: String
     let first_name: String
