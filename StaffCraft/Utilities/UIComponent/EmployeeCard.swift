@@ -65,7 +65,7 @@ struct EmployeeCard: View {
                 }
                 .sheet(isPresented: $isShowingEmployeeList) {
                     EmployeeListView()
-                        .environmentObject(UserData()) // Replace UserData() with your actual user data object
+                        .environmentObject(UserData())
                 }
             }
             .padding()

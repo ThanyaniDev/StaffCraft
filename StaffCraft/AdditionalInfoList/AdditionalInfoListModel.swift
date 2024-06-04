@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct AdditionalInfoListResponse: Decodable {
+struct AdditionalInfoListResponse: Codable {
     let data: [AdditionalInfoList]
 }
 
-struct AdditionalInfoList: Identifiable, Equatable, Decodable  {
+struct AdditionalInfoList: Identifiable, Equatable, Codable  {
     let id: Int
     let name: String
     let color: String

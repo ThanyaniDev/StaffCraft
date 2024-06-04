@@ -20,27 +20,27 @@ class EmployeeReviewViewModel: ObservableObject {
     
     @MainActor
     func submitEmployeeDetails(userData: UserData) async {
-        let employeeReviewRequest = EmployeeReviewRequest(userLoginToken: userData.userLoginToken,
+        let employeeReviewRequest = EmployeeReviewRequest(userLoginToken: userData.userLoginToken ?? "",
                                                           personalDetails: EmployeePersonalDetails(id: userData.id,
-                                                                                                   email: userData.selectedEmployeeEmail,
-                                                                                                   first_name: userData.selectedEmployee,
-                                                                                                   last_name: userData.selectedEmployee,
-                                                                                                   avatar: userData.selectedImageUrl,
+                                                                                                   email: userData.selectedEmployeeEmail ?? "",
+                                                                                                   first_name: userData.selectedEmployee ?? "",
+                                                                                                   last_name: userData.selectedEmployee ?? "",
+                                                                                                   avatar: userData.selectedImageUrl ?? "",
                                                                                                    DOB: userData.selectedDate?.toFormattedString() ?? "",
                                                                                                    gender: userData.gender),
                                                           additionalInformation: EmployeeReviewAdditionalInfo(placeOfBirth: userData.placeOfBirth,
                                                                                                               preferredColor: userData.selectedPreferredColor,
                                                                                                               residentialAddress: userData.residentialAddress))
        
-        isLoading = true
+        self.isLoading = true
         defer {
-            isLoading = false
+            self.isLoading = false
         }
         
         do {
             let response = try await employeeReviewRepository.submitEmployeeDetails(request: employeeReviewRequest)
             self.isCreadted = response.createdAt
-            self.successSubHeader =  "Congratulations you have successfully updated personal details and additional details for \(response.personalDetails.first_name) on \(userData.selectedDate?.toFormattedStringText() ?? "") at \(userData.selectedDate?.toFormattedTimeString() ?? "")"
+            self.successSubHeader =  "Congratulations you have successfully updated personal details and additional details for \(response.personalDetails.first_name) on \(Date().toFormattedStringText()) at \(userData.selectedDate?.toFormattedTimeString() ?? "")"
         } catch {
             self.errorMessage = "Failed to load employees: \(error.localizedDescription)"
         }

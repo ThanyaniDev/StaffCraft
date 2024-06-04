@@ -8,7 +8,7 @@
 import SwiftUI
 
 class EmployeeListViewModel: ObservableObject {
-   
+    
     @Published var employees: [EmployeeList] = []
     @Published var isLoading: Bool = false
     @Published var errorMessage: String? = nil
@@ -19,25 +19,26 @@ class EmployeeListViewModel: ObservableObject {
     
     @MainActor
     func fetchEmployees() async {
-        isLoading = true
+        self.isLoading = true
         defer {
             self.isLoading = false
         }
         
         do {
             let employeesList = try await employeeListRepository.fetchEmployeesList()
-            self.employees = employeesList
+            let employeeListSorted = employeesList.sorted() {$0.first_name < $1.first_name}
+            self.employees = employeeListSorted
         } catch {
             self.errorMessage = "Failed to load employees: \(error.localizedDescription)"
         }
     }
     
-  var filteredEmployees: [EmployeeList] {
+    var filteredEmployees: [EmployeeList] {
         if searchText.isEmpty {
             return employees
         } else {
             return employees.filter { employee in
-                employee.first_name .lowercased().contains(searchText.lowercased()) ||
+                employee.first_name.lowercased().contains(searchText.lowercased()) ||
                 employee.email.lowercased().contains(searchText.lowercased())
             }
         }

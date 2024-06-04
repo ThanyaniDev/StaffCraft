@@ -7,13 +7,13 @@
 
 import Foundation
 
-struct EmployeeReviewRequest: Encodable {
+struct EmployeeReviewRequest: Codable {
     let userLoginToken: String
     let personalDetails: EmployeePersonalDetails
     let additionalInformation: EmployeeReviewAdditionalInfo
 }
 
-struct EmployeePersonalDetails: Identifiable, Encodable,Decodable {
+struct EmployeePersonalDetails: Identifiable, Codable {
     let id: Int
     let email: String
     let first_name: String
@@ -23,13 +23,13 @@ struct EmployeePersonalDetails: Identifiable, Encodable,Decodable {
     let gender: String
 }
 
-struct EmployeeReviewAdditionalInfo: Encodable,Decodable {
+struct EmployeeReviewAdditionalInfo: Codable {
     let placeOfBirth: String
     let preferredColor: String
     let residentialAddress: String
 }
 
-struct EmployeeReviewResponse: Decodable {
+struct EmployeeReviewResponse: Codable {
     let userLoginToken: String
     let personalDetails: EmployeePersonalDetails
     let additionalInformation: EmployeeReviewAdditionalInfo
